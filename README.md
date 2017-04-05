@@ -136,7 +136,7 @@ This Demo App uses RabbitMQ as its Message Broker. You install RabbitMQ locally.
 ### Install RabbitMQ Locally
 Please follow the instructions to download and install RabbitMQ locally before you can run this Demo App.
 
-![Downloading and Installing  RabbitMQ](https://www.rabbitmq.com/download.html)
+[Downloading and Installing  RabbitMQ](https://www.rabbitmq.com/download.html)
 
 ### Set RabbitMQ host, username, & password in application.properties
 Set these values for RabbitMQ in 'application.properties' file
@@ -148,7 +148,7 @@ Set these values for RabbitMQ in 'application.properties' file
 > rabbitmq.password=guest
 
 ### Get the Demo App Source Code
-Get the Demo App source code ![here](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/edit/master). 
+Get the Demo App source code [here](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/edit/master). 
 
 Preferrable, you import the source code into your favorite IDE, such as Eclipse, or IntelliJ IDEA
 
