@@ -43,7 +43,11 @@ Set these values for RabbitMQ in 'application.properties' file
 > rabbitmq.password=guest
 
 ### Get the Demo App Source Code
-Get the Demo App source code [here](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo.git). 
+You can get the Demo App source code [here](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo.git) using the upper-right "Clone or download" button. 
+
+OR, use the command:
+
+> $ git clone https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo.git
 
 Preferrable, you import the source code into your favorite IDE, such as Eclipse, or IntelliJ IDEA
 
