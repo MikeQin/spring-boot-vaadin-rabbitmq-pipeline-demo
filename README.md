@@ -20,7 +20,7 @@
   * Jayway JsonPath
 
 ## The Complete Maven pom.xml
-You can find the complete Maven [pom.xml here](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/pom.xml).
+You can find the complete Maven [pom.xml](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/pom.xml).
 
 ## Pipeline Processing Design
 ![demo app](https://cloud.githubusercontent.com/assets/4248714/24716926/97461a2a-19fe-11e7-8461-75e7281175e5.jpg)
