@@ -127,4 +127,12 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+## Pipeline Processing Design
 
+## Prerequisites
+
+### Install RabbitMQ Locally
+
+### Get the Demo App Source Code
+
+## Run
