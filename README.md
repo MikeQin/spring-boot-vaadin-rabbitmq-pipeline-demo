@@ -1,6 +1,6 @@
 # Spring-Boot, Vaadin, RabbitMQ, Data Pipeline Demo
 
-## This Demo App showcases the following technology stack:
+## This Demo App Showcases the following Latest Technology Stack:
 
   * Spring AMQP Client
     - RabbitTemplate
