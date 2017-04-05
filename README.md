@@ -34,7 +34,7 @@ Please follow the instructions to download and install RabbitMQ locally before y
 [Downloading and Installing  RabbitMQ](https://www.rabbitmq.com/download.html)
 
 ### Set RabbitMQ host, username, & password in application.properties
-Set these values for RabbitMQ in 'application.properties' file
+Set these values for RabbitMQ in 'application.properties' file only if they're different from the default values.
 
 > rabbitmq.host=localhost
 
