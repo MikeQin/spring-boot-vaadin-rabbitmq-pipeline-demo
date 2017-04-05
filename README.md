@@ -86,7 +86,7 @@ Event types: 'INFO', 'WARNING', 'ERROR'.
 
 Returns current login.user
 
-### H2 Console
+### H2 Database Console
 
 When you login as 'ADMIN':
 
