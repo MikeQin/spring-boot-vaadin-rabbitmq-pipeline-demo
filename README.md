@@ -55,3 +55,41 @@ Preferrable, you import the source code into your favorite IDE, such as Eclipse,
 You can run this Demo App:
 
 > spring-boot:run
+
+### Basic Authentication Login
+> username: admin
+
+> password: admin
+
+There are currently two Roles: 'ADMIN', 'USER'
+
+> USER longin: user / user
+
+- 'USER' does not have privilege to call RESTful APIs, or view H2 Database console. See below for detail.
+- 'ADMIN' role can perform all tasks.
+
+### RESTful APIs
+
+When you login as 'ADMIN':
+
+> /events
+
+Returns all events.
+
+> /events?type=INFO
+
+Returns 'INFO' type events.
+
+Event types: 'INFO', 'WARNING', 'ERROR'.
+
+> /user
+
+Returns current login.user
+
+### H2 Console
+
+When you login as 'ADMIN':
+
+> /console
+
+To see all persisted events.
