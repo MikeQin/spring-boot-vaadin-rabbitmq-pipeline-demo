@@ -10,27 +10,25 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-    
-	/**
-	 * To logout, use /logout
-	 */
-	@Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-        	.csrf().disable()
-            .authorizeRequests()
-                .antMatchers("/events", "/console").hasRole("ADMIN") // Authorization: .antMatchers("/events").permitAll()
-                .anyRequest().authenticated() // All requests must be authenticated
-                .and()
-            .httpBasic();
-    }
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .inMemoryAuthentication()
-                .withUser("user").password("user").roles("USER")
-                	.and()
-                .withUser("admin").password("admin").roles("ADMIN");
-    }
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.httpBasic();
+
+		http.authorizeRequests().antMatchers("/events", "/console/*").hasRole("ADMIN") // Authorization
+				.anyRequest().authenticated(); // All requests must be
+												// Authenticated
+
+		// Dev ONLY:
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
+	}
+
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth.inMemoryAuthentication()
+			.withUser("user").password("user").roles("USER")
+				.and()
+			.withUser("admin").password("admin").roles("ADMIN");
+	}
 }
