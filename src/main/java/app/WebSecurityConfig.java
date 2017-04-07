@@ -19,9 +19,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.anyRequest().authenticated() // All requests must be authenticated
 			.antMatchers("/events", "/console/*").hasRole("ADMIN"); // Authorization
 
-		// Dev ONLY:
+		// Dev ONLY for access H2 DB console: /console
 		http.csrf().disable();
-		http.headers().frameOptions().disable();
+		http.headers().frameOptions().sameOrigin();
 	}
 
 	@Autowired
