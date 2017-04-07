@@ -1,6 +1,8 @@
 # Spring-Boot, Vaadin, RabbitMQ, Data Pipeline Demo
 
-## This Demo App Showcases the following Latest Technology Stack:
+## Overview
+
+### This Demo App Showcases the following Latest Technology Stack:
 
   * Spring AMQP Client
     - RabbitTemplate
@@ -36,11 +38,13 @@ Please follow the instructions to download and install RabbitMQ locally before y
 ### Set RabbitMQ host, username, & password in application.properties
 Set these values for RabbitMQ in 'application.properties' file only if they're different from the default values.
 
-> rabbitmq.host=localhost
+```
+rabbitmq.host=localhost
+rabbitmq.username=guest
+rabbitmq.password=guest
+```
 
-> rabbitmq.username=guest
-
-> rabbitmq.password=guest
+## Install
 
 ### Get the Demo App Source Code
 You can get the Demo App source code [here](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo.git) using the upper-right "Clone or download" button. 
@@ -54,9 +58,13 @@ Preferrable, you import the source code into your favorite IDE, such as Eclipse,
 ## Run
 You can run this Demo App:
 
-> spring-boot:run
+> mvn spring-boot:run
 
-### Basic Authentication Login
+### Demo App in Browser
+
+http://localhost:8080
+
+#### Basic Authentication Login
 > username: admin
 
 > password: admin
@@ -68,6 +76,20 @@ There are currently two Roles: 'ADMIN', 'USER'
 - 'USER' does not have privilege to call RESTful APIs, or view H2 Database console. See below for detail.
 - 'ADMIN' role can perform all tasks.
 
+### Demo App UI
+
+#### Demo View
+
+![demo view](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/demo-view.jpg)
+
+#### Streaming View
+
+![stream view](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/stream-view.jpg)
+
+### Console Log
+
+![stream log](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/stream-log.jpg)
+
 ### RESTful APIs
 
 When you login as 'ADMIN':
@@ -75,6 +97,8 @@ When you login as 'ADMIN':
 > /events
 
 Returns all events.
+
+![events](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/events-json.jpg)
 
 > /events?type=INFO
 
@@ -91,5 +115,16 @@ Returns current login.user
 When you login as 'ADMIN':
 
 > /console
+
+Please note the following H2 configuration (also in application.properties)
+
+```
+spring.datasource.url=jdbc:h2:file:~/test;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driverClassName=org.h2.Driver
+```
+
+![h2 console](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/h2-console.jpg)
 
 To see all persisted events.
