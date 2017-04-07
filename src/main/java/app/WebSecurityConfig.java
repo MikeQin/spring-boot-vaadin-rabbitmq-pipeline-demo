@@ -15,8 +15,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.httpBasic();
 
-		http.authorizeRequests().antMatchers("/events", "/console/*").hasRole("ADMIN") // Authorization
-				.anyRequest().authenticated(); // All requests must be authenticated
+		http.authorizeRequests()
+			.anyRequest().authenticated() // All requests must be authenticated
+			.antMatchers("/events", "/console/*").hasRole("ADMIN"); // Authorization
 
 		// Dev ONLY:
 		http.csrf().disable();
