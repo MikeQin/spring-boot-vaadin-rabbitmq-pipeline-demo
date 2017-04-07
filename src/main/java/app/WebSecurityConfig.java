@@ -16,8 +16,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.httpBasic();
 
 		http.authorizeRequests().antMatchers("/events", "/console/*").hasRole("ADMIN") // Authorization
-				.anyRequest().authenticated(); // All requests must be
-												// Authenticated
+				.anyRequest().authenticated(); // All requests must be authenticated
 
 		// Dev ONLY:
 		http.csrf().disable();
