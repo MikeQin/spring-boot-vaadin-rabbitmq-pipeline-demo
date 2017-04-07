@@ -92,31 +92,31 @@ There are currently two Roles: 'ADMIN', 'USER'
 
 ### RESTful APIs
 
-When you login as 'ADMIN':
+When you login as 'ADMIN' using browser:
 
-> /events
+> http://localhost:8080/events
 
 Returns all events.
 
 ![events](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/events-json.jpg)
 
-> /events?type=INFO
+> http://localhost:8080/events?type=INFO
 
 Returns 'INFO' type events.
 
 Event types: 'INFO', 'WARNING', 'ERROR'.
 
-> /user
+> http://localhost:8080/user
 
 Returns current login.user
 
 ### H2 Database Console
 
-When you login as 'ADMIN':
+When you login as 'ADMIN' using browser:
 
-> /console
+> http://localhost:8080/console
 
-Please note the following H2 configuration (also in application.properties)
+Please note the following H2 configurations (also in application.properties)
 
 ```
 spring.datasource.url=jdbc:h2:file:~/test;DB_CLOSE_ON_EXIT=FALSE
