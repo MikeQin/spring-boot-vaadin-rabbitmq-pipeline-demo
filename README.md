@@ -110,6 +110,16 @@ Event types: 'INFO', 'WARNING', 'ERROR'.
 
 Returns current login.user
 
+### RabbitMQ Management UI
+
+#### Exchange: x.topic.logs
+
+![exchange](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/x.topic.logs.jpg)
+
+#### Queues: q.logs.info, q.logs.warning, q.logs.error
+
+![queues](https://github.com/MikeQin/spring-boot-vaadin-rabbitmq-pipeline-demo/blob/master/docs/q.logs.jpg)
+
 ### H2 Database Console
 
 When you login as 'ADMIN' using browser:
